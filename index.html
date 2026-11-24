@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GNET — Kuwait's Premier Business Network</title>
+  <meta name="description"
+    content="Kuwait’s all-in-one business network. Real Connections, Great Opportunities — discover leading companies, top professionals, services, and career opportunities across Kuwait." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <!-- ===================================================
+         HERO WRAPPER + FLOATING PILL NAVBAR + PARTNER STRIP
+         =================================================== -->
+    <div class="hero-wrapper" id="home">
+      <img class="hero-bg-grid" src="assets/bg-hero-grid.png" alt="" aria-hidden="true" />
+      <div class="hero-bg-globe" aria-hidden="true">
+        <img src="assets/bg-hero-globe.png" alt="" />
+      </div>
+      <div class="hero-glow-left" aria-hidden="true"></div>
+      <div class="hero-glow-right" aria-hidden="true"></div>
+
+      <!-- Floating Pill Navigation -->
+      <header class="site-header">
+        <div class="container">
+          <nav class="navbar-pill" aria-label="Primary Navigation">
+            <a href="#home" class="gnet-logo" aria-label="GNET Home">
+              <img src="assets/gnet-logo.png" alt="GNET" />
+            </a>
+
+            <ul class="nav-links" id="desktopNavLinks">
+              <li><a href="#home" class="is-active" data-nav="home">Home</a></li>
+              <li><a href="#companies" data-nav="companies">Companies</a></li>
+              <li><a href="#explore" data-nav="services">Services</a></li>
+              <li><a href="#explore" data-nav="opportunities">Opportunities</a></li>
+              <li><a href="#jobs" data-nav="jobs">Jobs</a></li>
+              <li><a href="#talent" data-nav="talent">Talent</a></li>
+              <li><a href="#companies" data-nav="featured">Featured</a></li>
+            </ul>
+
+            <div class="nav-actions">
+              <button type="button" class="btn-pill btn-pill--outline btn-pill--lang"
+                id="langToggleBtn">العربيه</button>
+              <button type="button" class="btn-pill btn-pill--outline" id="signInBtn" data-i18n="nav.signIn">Sign
+                In</button>
+              <button type="button" class="btn-pill btn-pill--primary" id="joinBtn" data-i18n="nav.join">Join
+                GNET</button>
+            </div>
+
+            <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu"
+              aria-expanded="false">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <line x1="3" y1="7" x2="21" y2="7"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="17" x2="21" y2="17"></line>
+              </svg>
+            </button>
+          </nav>
+
+          <!-- Mobile Drawer -->
+          <div class="mobile-drawer" id="mobileDrawer">
+            <ul class="mobile-drawer-links" id="mobileNavLinks">
+              <li><a href="#home" data-nav="home">Home</a></li>
+              <li><a href="#companies" data-nav="companies">Companies</a></li>
+              <li><a href="#explore" data-nav="services">Services</a></li>
+              <li><a href="#explore" data-nav="opportunities">Opportunities</a></li>
+              <li><a href="#jobs" data-nav="jobs">Jobs</a></li>
+              <li><a href="#talent" data-nav="talent">Talent</a></li>
+              <li><a href="#companies" data-nav="featured">Featured</a></li>
+            </ul>
+            <div class="mobile-drawer-actions">
+              <button type="button" class="btn-pill btn-pill--outline btn-pill--lang"
+                id="mobileLangBtn">العربيه</button>
+              <button type="button" class="btn-pill btn-pill--outline" id="mobileSignInBtn" data-i18n="nav.signIn">Sign
+                In</button>
+              <button type="button" class="btn-pill btn-pill--primary" id="mobileJoinBtn" data-i18n="nav.join">Join
+                GNET</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero Content & SearchPanel -->
+      <section class="container hero-content" aria-labelledby="heroHeading">
+        <div class="hero-headline-group">
+          <div class="hero-eyebrow-pill">
+            <span data-i18n="hero.eyebrow">Kuwait's Premier Business Network</span>
+          </div>
+
+          <h1 class="hero-title" id="heroHeading">
+            <span class="hero-title__line1" data-i18n="hero.titleLine1">Real Connections</span>
+            <span class="hero-title__line2" data-i18n="hero.titleLine2">Great Opportunities</span>
+          </h1>
+
+          <p class="hero-subtitle" data-i18n="hero.subtitle">Kuwait’s all-in-one business network.</p>
+        </div>
+
+        <div class="search-panel-wrap">
+          <form class="search-panel" id="searchForm" role="search">
+            <div class="search-tabs" id="searchTabs" role="tablist" aria-label="Search Categories"></div>
+            <div class="search-bar-row">
+              <div class="search-input-wrap">
+                <img class="search-input-icon" src="assets/icon-search.svg" alt="" aria-hidden="true" />
+                <input type="search" id="searchInput" class="search-input"
+                  placeholder="Search companies, talent, services…" autocomplete="off" />
+              </div>
+              <button type="submit" class="search-submit-btn" id="searchSubmitBtn"
+                data-i18n="hero.searchBtn">Search</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Partner Logo Strip -->
+      <div class="partners-strip">
+        <div class="container">
+          <div class="partners-marquee" aria-label="Featured Partners">
+            <div class="partners-track" id="partnersTrack"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         SECTION 1: FEATURED COMPANIES
+         =================================================== -->
+    <section class="content-section" id="companies" aria-labelledby="companiesHeading">
+      <div class="section-backdrop section-backdrop--companies" aria-hidden="true">
+        <img src="assets/bg-companies.png" alt="" />
+        <div class="section-backdrop__overlay"></div>
+      </div>
+
+      <div class="container section-inner">
+        <div class="section-header section-header--with-glow">
+          <div>
+            <p class="section-eyebrow" data-i18n="companies.eyebrow">Featured Companies</p>
+            <h2 class="section-title" id="companiesHeading">
+              <span data-i18n="companies.titleLine1">Kuwait's Leading</span><br />
+              <span data-i18n="companies.titleLine2">Organizations</span>
+            </h2>
+          </div>
+          <button type="button" class="btn-pill btn-pill--primary" id="viewAllCompaniesBtn" data-i18n="companies.cta">
+            View All Companies
+          </button>
+        </div>
+
+        <div class="carousel-viewport" id="companiesViewport">
+          <div class="carousel-track" id="companiesTrack"></div>
+        </div>
+
+        <div class="carousel-controls">
+          <button type="button" class="carousel-arrow-btn carousel-arrow-btn--prev" data-carousel="companies"
+            data-dir="prev" aria-label="Previous companies">
+            <img src="assets/icon-arrow-circle-right.svg" alt="" />
+          </button>
+          <button type="button" class="carousel-arrow-btn" data-carousel="companies" data-dir="next"
+            aria-label="Next companies">
+            <img src="assets/icon-arrow-circle-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         SECTION 2: EXPLORE GNET
+         =================================================== -->
+    <section class="content-section" id="explore" aria-labelledby="exploreHeading">
+      <div class="section-backdrop section-backdrop--explore" aria-hidden="true">
+        <img src="assets/bg-explore.png" alt="" />
+        <div class="section-backdrop__overlay"></div>
+      </div>
+
+      <div class="container section-inner">
+        <div class="section-header">
+          <div>
+            <p class="section-eyebrow" data-i18n="explore.eyebrow">Explore Gnet</p>
+            <h2 class="section-title" id="exploreHeading">
+              <span data-i18n="explore.titleLine1">Discover More &amp;</span><br />
+              <span data-i18n="explore.titleLine2">Connect Better</span>
+            </h2>
+          </div>
+          <button type="button" class="btn-pill btn-pill--primary" id="discoverMoreBtn" data-i18n="explore.cta">
+            Discover More
+          </button>
+        </div>
+
+        <div class="cards-grid-4" id="exploreGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         SECTION 3: FEATURED TALENT
+         =================================================== -->
+    <section class="content-section" id="talent" aria-labelledby="talentHeading">
+      <div class="section-backdrop section-backdrop--talent" aria-hidden="true">
+        <img src="assets/bg-talent.png" alt="" />
+        <div class="section-backdrop__overlay"></div>
+      </div>
+
+      <div class="container section-inner">
+        <div class="section-header">
+          <div>
+            <p class="section-eyebrow" data-i18n="talent.eyebrow">Featured Talent</p>
+            <h2 class="section-title" id="talentHeading">
+              <span data-i18n="talent.titleLine1">Kuwait's Top</span><br />
+              <span data-i18n="talent.titleLine2">Professionals</span>
+            </h2>
+          </div>
+          <button type="button" class="btn-pill btn-pill--primary" id="viewAllTalentBtn" data-i18n="talent.cta">
+            View All Talent
+          </button>
+        </div>
+
+        <div class="carousel-viewport" id="talentViewport">
+          <div class="carousel-track" id="talentTrack"></div>
+        </div>
+
+        <div class="carousel-controls">
+          <button type="button" class="carousel-arrow-btn carousel-arrow-btn--prev" data-carousel="talent"
+            data-dir="prev" aria-label="Previous talent">
+            <img src="assets/icon-arrow-circle-right.svg" alt="" />
+          </button>
+          <button type="button" class="carousel-arrow-btn" data-carousel="talent" data-dir="next"
+            aria-label="Next talent">
+            <img src="assets/icon-arrow-circle-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         SECTION 4: CAREER OPPORTUNITIES
+         =================================================== -->
+    <section class="content-section" id="jobs" aria-labelledby="jobsHeading">
+      <div class="section-backdrop section-backdrop--jobs" aria-hidden="true">
+        <img src="assets/bg-jobs.png" alt="" />
+        <div class="section-backdrop__overlay"></div>
+      </div>
+
+      <div class="container section-inner">
+        <div class="section-header">
+          <div>
+            <p class="section-eyebrow" data-i18n="jobs.eyebrow">Career opportunities</p>
+            <h2 class="section-title" id="jobsHeading">
+              <span data-i18n="jobs.titleLine1">Discover Featured</span><br />
+              <span data-i18n="jobs.titleLine2">Career Opportunities</span>
+            </h2>
+          </div>
+          <button type="button" class="btn-pill btn-pill--primary" id="viewAllJobsBtn" data-i18n="jobs.cta">
+            View All Jobs
+          </button>
+        </div>
+
+        <div class="carousel-viewport" id="jobsViewport">
+          <div class="carousel-track" id="jobsTrack"></div>
+        </div>
+
+        <div class="carousel-controls">
+          <button type="button" class="carousel-arrow-btn carousel-arrow-btn--prev" data-carousel="jobs" data-dir="prev"
+            aria-label="Previous jobs">
+            <img src="assets/icon-arrow-circle-right.svg" alt="" />
+          </button>
+          <button type="button" class="carousel-arrow-btn" data-carousel="jobs" data-dir="next" aria-label="Next jobs">
+            <img src="assets/icon-arrow-circle-right.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         SECTION 5: BOTTOM CTA BANNER
+         =================================================== -->
+    <section class="cta-section" id="cta" aria-labelledby="ctaHeading">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner__bg-grad" aria-hidden="true"></div>
+          <div class="cta-banner__bg-img" aria-hidden="true">
+            <img src="assets/cta-banner-bg.png" alt="" />
+          </div>
+
+          <div class="cta-banner__content">
+            <div>
+              <h2 class="cta-banner__title" id="ctaHeading">
+                <span data-i18n="cta.titlePrefix">Kuwait's </span><span class="cta-banner__title-accent"
+                  data-i18n="cta.titleAccent">Business</span><br />
+                <span data-i18n="cta.titleLine2">Network Awaits</span>
+              </h2>
+              <p class="cta-banner__desc">
+                <span data-i18n="cta.descLine1">Join 28,000+ professionals and 4,800+ companies already
+                  growing</span><br />
+                <span data-i18n="cta.descLine2">through GNET. Create your free profile today no credit card
+                  required.</span>
+              </p>
+            </div>
+
+            <div class="cta-banner__actions">
+              <button type="button" class="btn-pill btn-pill--primary-bordered" id="registerCompanyBtn"
+                data-i18n="cta.btnCompany">
+                Register Your Company
+              </button>
+              <button type="button" class="btn-pill btn-pill--outline" id="joinIndividualBtn"
+                data-i18n="cta.btnIndividual">
+                Join as an Individual
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         FOOTER
+         =================================================== -->
+    <footer class="site-footer" id="footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div class="footer-top">
+            <a href="#home" class="gnet-logo" aria-label="GNET Home">
+              <img src="assets/gnet-logo.png" alt="GNET" />
+            </a>
+
+            <ul class="footer-links" id="footerLinks"></ul>
+
+            <div class="footer-socials" aria-label="Social Media">
+              <a href="#footer" class="social-btn" aria-label="X" data-social="X">
+                <img src="assets/icon-x.svg" alt="" />
+              </a>
+              <a href="#footer" class="social-btn" aria-label="Instagram" data-social="Instagram">
+                <img src="assets/icon-instagram.svg" alt="" />
+              </a>
+              <a href="#footer" class="social-btn" aria-label="YouTube" data-social="YouTube">
+                <img src="assets/icon-youtube.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-divider" aria-hidden="true">
+            <img src="assets/footer-line.svg" alt="" />
+          </div>
+
+          <p class="footer-copy" data-i18n="footer.copyright">© 2026 GNET. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
